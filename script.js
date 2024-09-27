@@ -18,9 +18,9 @@ const getProducts = function (){
     .then((products)=>{
         console.log('prodotti disponibili', products)
 
-        //qui invoco la funzione per creare le card 
+       
         createCards(products)
-        //loading
+
         const loadingIndicator = document.getElementById('loading'); 
         loadingIndicator.classList.add('d-none'); 
 

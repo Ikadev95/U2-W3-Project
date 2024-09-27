@@ -11965,15 +11965,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#guitars {
-  max-height: 190px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-
 .bodyCard {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.bodyCard .card-text {
+  display: flex;
+  flex-grow: 18;
 }
 
 .cardText {
@@ -11983,10 +11982,6 @@ textarea.form-control-lg {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  flex-shrink: 2;
-}
-
-.card-text {
   flex-shrink: 2;
 }
 
@@ -12020,4 +12015,12 @@ textarea.form-control-lg {
 
 .card {
   height: 100%;
+}
+
+.carousel-item img {
+  max-height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=style.css.map */

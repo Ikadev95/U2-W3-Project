@@ -32,13 +32,15 @@ const getProd = function () {
                               <div class="col-md-8">
                                 <div class="card-body bodyCard">
                                   <h3 class="card-title">${product.name}</h3>
-                                  <p class="card-text">${product.description}</p>
-                                  <p class="card-text d-flex justify-content-between align-items-center"> 
-                                    <small class="text-body-secondary" id="brand">Brand: ${product.brand} </small>
-                                    <span id = "price">${product.price} €</span>
-                                </p>
-                                  <button class="btn btn-secondary mod">Modifica</button>
-                                  <button class="btn btn-danger" id= "del" >Elimina</button>
+                                  <p class="card-text mt-2">${product.description}</p>
+                                  <p class=" d-flex justify-content-between align-items-center"> 
+                                    <small class="" id="brand"> Brand: ${product.brand} </small>
+                                    <span class="fs-2 text" id = "price">${product.price} €</span>
+                                  </p>
+                                  <div>
+                                      <button class="btn btn-secondary mod">Modifica</button>
+                                      <button class="btn btn-danger" id= "del" >Elimina</button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
