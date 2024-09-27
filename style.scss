@@ -70,3 +70,20 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
     object-fit: cover;
     object-position: center;
 }
+#guitars{
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+}
+.footer {
+    background-color: #000000; 
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+.footer a {
+    color: white; 
+}
+.footer a {
+    text-decoration: none
+}
