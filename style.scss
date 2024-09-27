@@ -12,12 +12,10 @@ $new-theme-colors: (
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 
-
-//prima tutto lo stile modificato
 @import './scss/bootstrap.scss';
 
 #guitars{
-    max-height: 160px;
+    max-height: 190px;
     object-fit: cover;
     width: 100%;
 } 
@@ -26,7 +24,20 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
     height: 100%;
 }
 
-
+.cardText {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    flex-shrink: 2;
+  }
+  
+  .card-text{
+    flex-shrink: 2;
+}
+  
 .navbar-nav .nav-link:hover {
     color: #c7715e ; 
     text-decoration: underline; 
@@ -40,4 +51,19 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
     color: inherit; 
     text-decoration: none; 
     transition: all 0.3s ease; 
+}
+
+.form-control:focus {
+    border: 1px solid #f4c7bd;
+    box-shadow: 0 0 5px rgba(251, 193, 99, 0.5); 
+    background-color: #fff7f0; 
+    font-weight: bold; 
+    transform: scale(1.05); 
+    transition: all 0.3s ease; 
+  }
+.form-control{
+    border: 1px solid #f4c7bd; 
+}
+.card{
+    height: 100%;
 }

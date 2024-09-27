@@ -35,6 +35,7 @@ if (id) {
 
         document.getElementsByClassName('btn-primary')[0].innerText = "Modifica"
         document.getElementsByTagName('h1')[0].innerText = "Backoffice - Modifica"
+        document.getElementsByClassName('nav-link')[1].src = './back.html'
       })
       .catch((err) => {
         console.log('ERROR', err)

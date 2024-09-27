@@ -39,7 +39,7 @@ const createCards = function (products){
                         <img src="${product.imageUrl}" class="card-img-top mt-3" alt="guitar image">
                         <div class="card-body">
                           <h5 class="card-title">${product.name}</h5>
-                          <p class="card-text">${product.description}</p>
+                          <p class="cardText" >${product.description}</p>
                           <button class="btn btn-primary view"> <i class="fa-regular fa-eye"></i> Dettaglio</button>
                           <button class="btn btn-secondary mod"><i class="fa-solid fa-pen-to-square"></i> Modifica</button>
                         </div>

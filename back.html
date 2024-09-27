@@ -10,7 +10,7 @@
   <body>
 
     <!-- nav inizio -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="./index.html"><img src="./crudazon.png" height="42"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,38 +35,38 @@
             <h1>Backoffice</h1>
             <p>Modifica i dettagli del prodotto qui sotto per garantire che le informazioni siano sempre accurate e aggiornate.</p>
             <div class="row row-gap-3">
-                <div class="col">
+                <div class="col-12 col-md-8 col-lg-8">
     
                     <form id="form">
     
                         <div class="mb-3">
-                          <label for="name" class="form-label">Nome</label>
-                          <input type="text" class="form-control" id="name" required>
+                          <label for="name" class="form-label">Modello</label>
+                          <input type="text" class="form-control" id="name" placeholder="Modello chitarra" required>
                         </div>
     
                         <div class="mb-3">
                           <label for="description" class="form-label">Descrizione</label>
-                          <input type="text" class="form-control" id="description" required>
+                          <textarea class="form-control" id="description"rows="4" placeholder="Scrivi qui..." required></textarea>
                         </div>
     
                         <div class="mb-3">
                             <label for="brand" class="form-label">Brand</label>
-                            <input type="text" class="form-control" id="brand" required>
+                            <input type="text" class="form-control" id="brand" placeholder="Fender,Taylor..."required>
                         </div>
     
                         <div class="mb-3">
                             <label for="imgUrl" class="form-label">ImageUrl</label>
-                            <input type="text" class="form-control" id="imgUrl" required>
+                            <input type="url" class="form-control" id="imgUrl" placeholder="https://..."required>
                         </div>
     
                         <div class="mb-3"></div>
                             <label for="price" class="form-label">Prezzo</label>
-                            <input type="text" class="form-control" id="price" required>
+                            <input type="number" class="form-control" id="price" placeholder="100"required>
                         </div>
     
                         <div>
                           <button type="submit" class="btn btn-primary mt-3">Crea</button>
-                          <button class="btn btn-secondary mt-3">Reset</button>
+                          <button type="button" class="btn btn-secondary mt-3">Reset</button>
                         </div>
     
                     </form>
