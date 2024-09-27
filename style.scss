@@ -1,0 +1,27 @@
+@import './scss/functions';
+@import './scss/variables';
+
+
+$new-primary: #ca8272;
+$new-secondary: #EED9B4;
+
+$new-theme-colors: (
+  'primary': $new-primary,
+  'secondary': $new-secondary,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+
+//prima tutto lo stile modificato
+@import './scss/bootstrap.scss';
+
+#guitars{
+    max-height: 160px;
+    object-fit: cover;
+    width: 100%;
+} 
+
+.bodyCard {
+    height: 100%;
+}
