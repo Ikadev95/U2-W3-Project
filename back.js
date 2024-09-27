@@ -34,6 +34,7 @@ if (id) {
         price.value = prodotto.price
 
         document.getElementsByClassName('btn-primary')[0].innerText = "Modifica"
+        document.getElementsByTagName('h1')[0].innerText = "Backoffice - Modifica"
       })
       .catch((err) => {
         console.log('ERROR', err)
@@ -61,6 +62,11 @@ class Product {
     const brand = document.getElementById('brand').value;
     const imageUrl = document.getElementById('imgUrl').value;
     const price = document.getElementById('price').value;
+
+    if (!name || !description || !brand || !imageUrl || !price) {
+        alert("Per favore, compila tutti i campi."); 
+        return; 
+    }
 
     const prod = new Product (name,description,brand,imageUrl,price);
 
@@ -100,3 +106,10 @@ class Product {
     console.log('errore',err)
   })
 })
+
+
+    const resetBtn = document.getElementsByClassName('btn-secondary');
+    resetBtn[0].addEventListener('click',function(){
+        if (confirm("Sei sicuro di voler resettare il modulo? Tutti i dati verranno persi.")) {
+        form.reset(); }
+    })

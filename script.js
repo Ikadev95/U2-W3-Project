@@ -1,6 +1,7 @@
 const productsURL = 'https://striveschool-api.herokuapp.com/api/product/';
 
 const getProducts = function (){
+
     fetch(productsURL,{
         headers: {
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY2NmEzYzc5YzQ1ZjAwMTU2OWI0YzUiLCJpYXQiOjE3Mjc0MjUwODQsImV4cCI6MTcyODYzNDY4NH0.hYHzkYMNfNvxz8F_k5VWBA8x51i7rOINFJpWYiC33TI"
@@ -19,6 +20,10 @@ const getProducts = function (){
 
         //qui invoco la funzione per creare le card 
         createCards(products)
+        //loading
+        const loadingIndicator = document.getElementById('loading'); 
+        loadingIndicator.classList.add('d-none'); 
+
     })
     .catch ((err)=>{
         console.log('errore', err)

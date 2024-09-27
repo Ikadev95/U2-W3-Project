@@ -24,7 +24,7 @@ const getProd = function () {
         const col = document.createElement('div') 
         col.classList.add('col')
         col.innerHTML = `
-             <div class="card mb-3 shadow border-0 mt-3">
+             <div class="card mb-3 border-0 mt-3">
                             <div class="row g-0">
                               <div class="col-md-4">
                                 <img src="${product.imageUrl}" class="img-fluid rounded-start py-4" alt="guitar">
@@ -37,7 +37,7 @@ const getProd = function () {
                                     <small class="text-body-secondary" id="brand">Brand: ${product.brand} </small>
                                     <span id = "price">${product.price} €</span>
                                 </p>
-                                  <button class="btn btn-secondary">Modifica</button>
+                                  <button class="btn btn-secondary mod">Modifica</button>
                                   <button class="btn btn-danger" id= "del" >Elimina</button>
                                 </div>
                               </div>
@@ -47,6 +47,11 @@ const getProd = function () {
         row.appendChild(col)
 
         deleteProd();
+
+        const modBtn = document.querySelector('.mod'); 
+        modBtn.addEventListener('click',function(){
+        location.href = `./back.html?pId=${product._id}`;
+      }) 
         
       })
       .catch((err) => {
@@ -63,6 +68,7 @@ const getProd = function () {
     const delBtn = document.querySelector('.btn-danger');
     console.log(delBtn);
     delBtn.addEventListener('click',function(){
+        if (confirm("Sei sicuro di voler eliminare questo prodotto? Questa operazione è irreversibile.")) {
       fetch(productsURL + '/' + id,{
           method:'DELETE',
           headers:{
@@ -82,5 +88,8 @@ const getProd = function () {
       .catch((err)=>{
           console.log('errore',err)
       })
+     }
     })
+    
   }
+
