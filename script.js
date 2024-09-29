@@ -36,12 +36,14 @@ const createCards = function (products){
         col.classList.add('col', 'col-12', 'col-md-6','col-lg-3')
         col.innerHTML = `
                     <div class="card shadow border-0">
-                        <img src="${product.imageUrl}" class="card-img-top mt-3" alt="guitar image">
-                        <div class="card-body">
-                          <h5 class="card-title">${product.name}</h5>
+                        <img src="${product.imageUrl}" class="card-img-top mt-3 px-3" alt="guitar image">
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title flex-grow-1">${product.name}</h5>
                           <p class="cardText" >${product.description}</p>
-                          <button class="btn btn-primary view"> <i class="fa-regular fa-eye"></i> Dettaglio</button>
-                          <button class="btn btn-secondary mod"><i class="fa-solid fa-pen-to-square"></i> Modifica</button>
+                          <div class="row gap-lg-0 gap-2">
+                              <div class="col-12 col-lg-6 pe-lg-1"><button class="btn btn-primary view"> <i class="fa-regular fa-eye"></i> Dettaglio</button></div>
+                              <div class="col-12 col-lg-6 ps-lg-1"><button class="btn btn-outline-secondary mod modify"><i class="fa-solid fa-pen-to-square"></i> Modifica</button></div>
+                          </div>
                         </div>
                       </div>
         `
@@ -64,3 +66,15 @@ const createCards = function (products){
 }
 
 getProducts();
+
+const nav = document.getElementsByClassName('navbar')[0];
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 150  || document.documentElement.scrollTop >= 150 ) {
+        nav.classList.add("nav-colored");
+        nav.classList.add("shadow");
+    } 
+    else {
+        nav.classList.remove("shadow");
+        nav.classList.remove("nav-colored");
+    }
+};

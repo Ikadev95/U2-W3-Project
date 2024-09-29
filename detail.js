@@ -24,18 +24,18 @@ const getProd = function () {
         const col = document.createElement('div') 
         col.classList.add('col')
         col.innerHTML = `
-             <div class="card mb-3 border-0 mt-3">
+             <div class="card mb-3 border-0 mt-5">
                             <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="${product.imageUrl}" class="img-fluid rounded-start py-4" alt="guitar">
+                              <div class="col-md-7">
+                                <img src="${product.imageUrl}" class="img-fluid rounded-start py-1 detImg" alt="guitar">
                               </div>
-                              <div class="col-md-8">
+                              <div class="col-md-5">
                                 <div class="card-body bodyCard">
-                                  <h3 class="card-title">${product.name}</h3>
+                                  <h1 class="card-title">${product.name}</h1>
                                   <p class="card-text mt-2">${product.description}</p>
                                   <p class=" d-flex justify-content-between align-items-center"> 
                                     <small class="" id="brand"> Brand: ${product.brand} </small>
-                                    <span class="fs-2 text" id = "price">${product.price} €</span>
+                                    <span class="fs-1 text" id = "price">${product.price} €</span>
                                   </p>
                                   <div>
                                       <button class="btn btn-secondary mod">Modifica</button>
@@ -95,3 +95,14 @@ const getProd = function () {
     
   }
 
+  const nav = document.getElementsByClassName('navbar')[0];
+  window.onscroll = function () { 
+      if (document.body.scrollTop >= 150  || document.documentElement.scrollTop >= 150 ) {
+          nav.classList.add("nav-colored");
+          nav.classList.add("shadow");
+      } 
+      else {
+          nav.classList.remove("shadow");
+          nav.classList.remove("nav-colored");
+      }
+  };

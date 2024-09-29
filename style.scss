@@ -2,12 +2,14 @@
 @import './scss/variables';
 
 
-$new-primary: #ca8272;
-$new-secondary: #EED9B4;
+$new-primary: #0c0c0c;
+$new-secondary: #fbad48;
+$new-danger: #ed6b4e;
 
 $new-theme-colors: (
   'primary': $new-primary,
   'secondary': $new-secondary,
+  'danger': $new-danger,
 );
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
@@ -37,9 +39,9 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
   }
   
 .navbar-nav .nav-link:hover {
-    color: #c7715e ; 
+    color: $new-secondary ; 
     text-decoration: underline; 
-    text-decoration-color: #c7715e ; 
+    text-decoration-color: $new-secondary ; 
     font-weight: bold; 
     font-size: 1.2rem; 
     transition: all 0.3s ease; 
@@ -52,7 +54,7 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
 }
 
 .form-control:focus {
-    border: 1px solid #f4c7bd;
+    border: 1px solid #f7ebdb;
     box-shadow: 0 0 5px rgba(251, 193, 99, 0.5); 
     background-color: #fff7f0; 
     font-weight: bold; 
@@ -60,7 +62,7 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
     transition: all 0.3s ease; 
   }
 .form-control{
-    border: 1px solid #f4c7bd; 
+    border: 1px solid #f7ebdb; 
 }
 .card{
     height: 100%;
@@ -86,4 +88,27 @@ $theme-colors: map-merge($theme-colors, $new-theme-colors);
 }
 .footer a {
     text-decoration: none
+}
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.7s, box-shadow 0.3s;
+}
+.nav-colored{
+    background-color: #f7ebdb !important;
+
+}
+
+.detImg{
+    width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    padding-inline: 4%;
+}
+.view{
+    width: 100%;
+    height: 100%;
+}
+.modify{
+    width:100%;
+    height: 100%;
 }

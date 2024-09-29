@@ -24,6 +24,7 @@ if (id) {
         const description = document.getElementById('description');
         const brand = document.getElementById('brand');
         const imageUrl = document.getElementById('imgUrl');
+        const imageUrl2 = document.getElementById('imgUrl2');
         const price = document.getElementById('price');
   
 
@@ -114,3 +115,16 @@ class Product {
         if (confirm("Sei sicuro di voler resettare il modulo? Tutti i dati verranno persi.")) {
         form.reset(); }
     })
+
+  
+    const nav = document.getElementsByClassName('navbar')[0];
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 150  || document.documentElement.scrollTop >= 150 ) {
+        nav.classList.add("nav-colored");
+        nav.classList.add("shadow");
+    } 
+    else {
+        nav.classList.remove("shadow");
+        nav.classList.remove("nav-colored");
+    }
+};
