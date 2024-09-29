@@ -42,7 +42,7 @@ const createCards = function (products){
                           <p class="cardText" >${product.description}</p>
                           <div class="row gap-lg-0 gap-2">
                               <div class="col-12 col-lg-6 pe-lg-1"><button class="btn btn-primary view"> <i class="fa-regular fa-eye"></i> Dettaglio</button></div>
-                              <div class="col-12 col-lg-6 ps-lg-1"><button class="btn btn-outline-secondary mod modify"><i class="fa-solid fa-pen-to-square"></i> Modifica</button></div>
+                              <div class="col-12 col-lg-6 ps-lg-1"><button class="btn btn-outline-secondary mod modify "><i class="fa-solid fa-pen-to-square"></i> Modifica</button></div>
                           </div>
                         </div>
                       </div>

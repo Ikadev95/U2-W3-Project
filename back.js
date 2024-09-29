@@ -4,6 +4,23 @@ const addressBarContent = new URLSearchParams(location.search)
 
 const id = addressBarContent.get('pId');
 
+function showError(message) {
+  const errorDiv = document.getElementById('error-message');
+  errorDiv.textContent = message;
+  errorDiv.classList.remove('d-none'); 
+}
+function showSuccess(message){
+  const successDiv = document.getElementById('success-message');
+  successDiv = message;
+  successDiv.classList.remove('d-none');
+}
+
+function hideError() {
+  const errorMessageDiv = document.getElementById('error-message');
+  errorMessageDiv.classList.add('d-none'); 
+}
+
+
 if (id) {
     fetch(productsURL + id,{
         headers:{
@@ -24,7 +41,6 @@ if (id) {
         const description = document.getElementById('description');
         const brand = document.getElementById('brand');
         const imageUrl = document.getElementById('imgUrl');
-        const imageUrl2 = document.getElementById('imgUrl2');
         const price = document.getElementById('price');
   
 
@@ -66,7 +82,7 @@ class Product {
     const price = document.getElementById('price').value;
 
     if (!name || !description || !brand || !imageUrl || !price) {
-        alert("Per favore, compila tutti i campi."); 
+        showError("Per favore, compila tutti i campi."); 
         return; 
     }
 

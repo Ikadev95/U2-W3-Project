@@ -38,8 +38,8 @@ const getProd = function () {
                                     <span class="fs-1 text" id = "price">${product.price} €</span>
                                   </p>
                                   <div>
-                                      <button class="btn btn-secondary mod">Modifica</button>
-                                      <button class="btn btn-danger" id= "del" >Elimina</button>
+                                      <button class="btn btn-primary mod"><i class="fa-solid fa-pen-to-square"></i> Modifica</button>
+                                      <button class="btn btn-danger" id= "del" > <i class="fa-solid fa-trash-can"></i> Elimina</button>
                                   </div>
                                 </div>
                               </div>
