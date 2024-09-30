@@ -11,15 +11,14 @@ function showError(message) {
 }
 function showSuccess(message){
   const successDiv = document.getElementById('success-message');
-  successDiv = message;
+  successDiv.textContent = message;
   successDiv.classList.remove('d-none');
 }
 
 function hideError() {
   const errorMessageDiv = document.getElementById('error-message');
-  errorMessageDiv.classList.add('d-none'); 
+  errorMessageDiv.classList.add('d-none');
 }
-
 
 if (id) {
     fetch(productsURL + id,{
@@ -56,6 +55,7 @@ if (id) {
       })
       .catch((err) => {
         console.log('ERROR', err)
+        showError("Errore durante il recupero del prodotto. Riprova più tardi.");
       })
   }
 
@@ -112,9 +112,12 @@ class Product {
 
   .then((response) =>{
     if (response.ok){
-        alert(id ? 'prodotto modificato':'prodotto salvato');
+      hideError();
+      showSuccess(id ? 'Prodotto modificato con successo!' : 'Prodotto salvato con successo!');
+      setTimeout(() => {
         form.reset();
-        location.assign('./index.html')
+        location.assign('./index.html');
+      }, 1200);
     }
     else{
         throw new Error ('errore in risposta server')
@@ -129,7 +132,8 @@ class Product {
     const resetBtn = document.getElementsByClassName('btn-secondary');
     resetBtn[0].addEventListener('click',function(){
         if (confirm("Sei sicuro di voler resettare il modulo? Tutti i dati verranno persi.")) {
-        form.reset(); }
+        form.reset();
+        hideError(); }
     })
 
   
